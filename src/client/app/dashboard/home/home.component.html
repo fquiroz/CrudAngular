@@ -1,0 +1,87 @@
+<div class="animate">
+    <div class="animate">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-header card-primary card-inverse">
+                        <h3 class="card-title">Lista de comprobantes</h3>
+                    </div>
+                    <div class="card-block">
+
+                          <div class="row ">
+
+				 <div class="col-md-1 col-lg-1">
+					 <div class="form-group">
+							<div class="btn-group" dropdown>
+							<button id="single-button" type="button" class="btn btn-primary" dropdownToggle>
+								Tipo <span class="caret"></span>
+							</button>
+							<ul dropdownMenu role="menu" aria-labelledby="single-button">
+								<li role="menuitem"><a class="dropdown-item" >Factura</a></li>
+								<li role="menuitem"><a class="dropdown-item" >Nota de Credito</a></li>
+								<li role="menuitem"><a class="dropdown-item" >Nota de Debito</a></li>
+							</ul>
+							</div>
+                       </div>
+				 </div>
+                          </div>
+
+
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Age ID</th>
+                <th>Cod Sucursal</th>
+                <th>Tipo Comprobante</th>
+                <th>Importe Subtotal</th>
+                <th>Importe total</th>
+                <th>Fecha Vto</th>
+                <th>Fecha recibido</th>
+                <th>Fecha SAP</th>
+                <th>Asociado</th>
+                <th>Nro Doc</th>
+                <th>Clasif. Gasto</th>
+                <th>Cond. Pago</th>
+                <th>Gerencia Actual</th>
+                <th>Gerencia Recibe</th>
+                <th>Ult. Usuario</th>
+                <th>Ult. fecha</th>         
+                
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let comprobante of listaComprobantes">
+                <td> {{comprobante.id}}</td>
+                <td>{{comprobante.cod_suc}}</td>
+                <td>{{comprobante.tipo_comprobante}}</td>
+                <td>{{comprobante.importe_subtotal}}</td> 
+                <td>{{comprobante.importe_total}}</td>    
+                <td>{{comprobante.fecha_vencimiento}}</td>    
+                <td>{{comprobante.fecha_recibido}}</td>    
+                <td>{{comprobante.fecha_sap}}</td>                            
+                <td>{{comprobante.asociado}}</td>
+                <td>{{comprobante.numero_doc}}</td>    
+                <td>{{comprobante.clasificacion_gasto}}</td>    
+                <td>{{comprobante.condicion_pago}}</td>    
+                <td>{{comprobante.gerencia_actual}}</td>
+                <td>{{comprobante.gerencia_recibe}}</td>       
+                <td>{{comprobante.ultimo_usuario}}</td>       
+                <td>{{comprobante.ultima_fecha}}</td>                    
+            </tr>
+        </tbody>
+    </table>
+            <a  class="btn btn-primary">Agregar Comprobante</a>
+                </div>
+
+
+       
+      
+       
+
+            </div>
+        </div>
+
+        
+ 
+    </div>
+</div>

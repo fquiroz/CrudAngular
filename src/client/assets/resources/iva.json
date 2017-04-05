@@ -1,0 +1,36 @@
+ {   
+    "DATA":[
+        {
+        "id": 1,       
+        "descripcion":"EXENTO",
+        "valor": 0        
+         },
+         {
+        "id": 2,       
+        "descripcion":"IVA 5%",
+        "valor": 5        
+         },
+         {
+        "id": 3,       
+        "descripcion":"IVA 2.5%",
+        "valor": 2.5        
+         },
+         {
+        "id": 4,       
+        "descripcion":"IVA 10.5%",
+        "valor": 10.5        
+         },
+         {
+        "id": 5,       
+        "descripcion":"IVA 21%",
+        "valor": 21        
+         },
+         {
+        "id": 6,       
+        "descripcion":"IVA 27%",
+        "valor": 27        
+         }
+    ]    
+}
+
+	

@@ -1,0 +1,57 @@
+			
+				<div class="card">
+						
+							<div class="card-block2">
+								<label class="card-subtitle mb-2 text-muted">ITEM</label>
+                                  <form ngNoForm method="post">
+							<div class="form-group">
+								<div class="row textbox-margen">
+
+									<div *ngIf="false" class="col-md-1 ">
+										<label class="control-label "><i class="fa fa-user" aria-hidden="true"></i> ID</label>
+										<input type="text" class="form-control" [(ngModel)]="itemDetalle.id" disabled value="{{idItemAgregar}}"  />
+									</div>			
+							
+
+									<div class="col-md-1 ">
+										<label class="control-label "><i class="fa fa-user" aria-hidden="true"></i> Cantidad</label>
+										<input type="text" class="form-control" [(ngModel)]="itemDetalle.cantidad"   />
+									</div>
+
+									<div class="col-md-5">
+										<label class="control-label"><i class="fa fa-comment" aria-hidden="true"></i> Concepto</label>
+										<input type="text" class="form-control" [(ngModel)]="itemDetalle.concepto"   />
+									</div>
+
+					
+									<div class="col-md-1">
+										<label class="control-label"><i class="fa fa-star" aria-hidden="true"></i> Unidad</label>
+										<input type="text" class="form-control" [(ngModel)]="itemDetalle.unidad"   />
+									</div>
+
+								<div class="col-md-1">
+										<label class="control-label"><i class="fa fa-usd" aria-hidden="true"></i> Precio</label>
+										<input type="text" class="form-control" [(ngModel)]="itemDetalle.precio"   />
+									</div>
+
+									<div class="col-md-2 selectContainer">
+										<label class="control-label"><i class="fa fa-percent" aria-hidden="true"></i>IVA</label>
+										<select class="form-control" [(ngModel)]="ivaAgregarItem" name="listaIvas">
+											<option *ngFor="let iva of listaIvas" [ngValue]="iva" selected>{{iva.descripcion}}</option>
+										</select>
+									</div>
+                                  <!--<p>{{itemDetalle.oIva|json}}-->
+								<div class="col-xs-2 ">
+
+									<a href="Javascript:void(0);"  type="button" class="btn btn-primary boton-centrado btn-sm" (click)="agregarItem()" > Agregar</a>
+								</div>
+
+								</div>
+							</div>
+
+				
+						</form>
+
+							</div>
+
+						</div>

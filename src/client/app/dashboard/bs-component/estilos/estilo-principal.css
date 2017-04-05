@@ -1,0 +1,80 @@
+     .card-block {
+    height: 9
+	1000px !important;
+     }
+
+	.card-block2 {
+    height: auto !important;
+     }
+
+	 .card-subtitle{
+	margin-top:6px;	 
+    margin-left: 10px;
+    font-size: 0.8rem;
+}
+
+
+	 .col-fixed {
+    /* custom width */
+    width:320px;
+}
+.col-min {
+    /* custom min width */
+    min-width:320px;
+}
+.col-max {
+    /* custom max width */
+    max-width:320px;
+}
+
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+
+    margin-right:-4px;
+}
+.boton-centrado{
+margin-top: 28px;
+}
+
+.textbox-margen{
+margin-top:5px;
+margin-left:5px;
+}
+
+td, th {
+    padding: 1px !important;
+}
+
+
+input,select {
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+label{
+	    font-size: 0.775rem;
+}
+
+ .card .card-header .card-title {
+    font-size: 0.95rem;
+	margin-bottom: 3px;
+	    padding-bottom: 2px;
+    padding-top: 5px;
+}
+
+.modal-header {
+	color: #fff;
+    padding: 15px;
+    background: #373a3c;
+	background-color: #2c3e50;
+    border-color: #2c3e50;
+}
+
+.top-buffer { margin-top:20px; }

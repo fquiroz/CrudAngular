@@ -1,0 +1,296 @@
+
+<div class="animate">
+	<div class="row">
+     <div class="col-md-12 col-lg-12  col-centered">
+			<div class="card">
+				<div class="card-header card-primary card-inverse">
+						<span class="card-title">Carga de Comprobante</span>
+				</div>
+				<div class="card-block">
+
+                  <datos-cabecera></datos-cabecera>
+
+
+  	<div class="row  ">
+				<div class="card">
+				<div class="card-header card-primary card-inverse"><span class="card-title">Agregar </span></div>
+					<div class="card-block2">
+
+                    <div class="row ">
+						<div class="col-md-7 ">
+							<agregar-item [listaDetComprobantes]="listaDetComprobantes" [idItemAgregar]="idItemAgregar" [listaIvas]="listaIvas"></agregar-item>
+							
+							</div>
+						<div class="col-md-5 ">
+							<agregar-impuesto (notifyIDMax)="onNotifyIdMax($event)"></agregar-impuesto>
+							</div>
+					</div>
+					
+
+
+					</div>
+				</div>
+
+		</div> <!-- fin de fila-->
+
+ <div class="row ">
+	 			<div class="card">
+				<div class="card-header card-primary card-inverse">
+						<span class="card-title">Detalle</span>
+				</div>
+				<div class="card-block2">
+					<table class="table table-bordered textbox-margen">
+						<thead>
+						<tr>
+							<th>ID</th>
+							<th>Concepto</th>
+							<th>Unidad</th>
+							<th>Cantidad</th>
+							<th>Precio Unitario</th>
+							<th>IVA</th>
+
+							<th></th>
+							<th></th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr *ngFor="let item of listaDetComprobantes">
+							<td>{{item.id}}</td>
+							<td>{{item.concepto}}</td>
+							<td>{{item.unidad}}</td>
+							<td>{{item.cantidad}}</td>
+							<td>{{item.precio}}</td>
+							<td>{{item.oIva.valor}}</td>
+							<td><a class="btn btn-primary btn-xs" (click)="editar(item)"  >Editar</a></td>
+							<td>
+								<button class="btn btn-danger btn-xs" (click)="borrar(item)" >Borrar</button>
+							</td>
+						</tr>
+
+						</tbody>
+					</table>
+
+					    <!--<pagination  [totalItems]="totalItems" [itemsPerPage]="itemsPerPage" [(ngModel)]="currentPage" class="pagination-sm"
+        previousText="&lsaquo;" nextText="&rsaquo;" firstText="&laquo;" lastText="&raquo;" (pageChanged)="pageChanged($event)"></pagination>-->
+				</div>
+		</div>
+
+
+
+  <!--<div class="row top-buffer ">-->
+	  <div class="row">
+
+
+        <div class="col-xs-8"></div>
+		 
+
+	  <div class="col-xs-4">
+				<accordion>
+					<accordion-group #group  [isDisabled]="true">
+						<div accordion-heading>
+						<div class="row">
+						<div class="col-xs-6">
+							<label class="control-label"><i  aria-hidden="true"></i><h6>Subtotal</h6></label>
+						</div>
+						<div class="col-xs-6">
+							<input type="text" id="impuestosTxt" class="form-control" disabled  value="{{subtotal}}" />
+						</div>
+						</div>
+
+						</div>
+						ssads
+					</accordion-group>
+				</accordion>
+	  </div>
+			
+     <!--<div class="row">-->
+       	<div class="col-xs-4"></div>
+		<div class="col-xs-4"></div>
+		<div class="col-xs-4 fer">
+				<accordion>
+					<accordion-group #group >
+						<div accordion-heading >
+
+						<div class="row ">
+						<div class="col-xs-6">
+							<label class="control-label"><h6>Impuestos</h6></label>
+						</div>
+						<div class="col-xs-5">
+							<input type="text" id="impuestosTxt" class="form-control" [(ngModel)]="total_impuestos" (ngModelChange)="doSomething($event)" value="{{total_impuestos| currency:'USD':true:'1.2-2'}}" />
+						</div>
+						<div class="col-xs-1">
+							<i class="fa fa-arrow-down" aria-hidden="true"></i>
+						</div>
+						</div>
+
+						</div>
+				
+							<div class="form-group">
+								<div class="row">
+
+								<table class="table table-bordered textbox-margen">
+										<thead>
+										<tr>
+											<th>Impuesto</th>
+											<th>Importe</th>
+										</tr>
+										</thead>
+										<tbody>
+										<tr *ngFor="let iva of listaIvasDetalle">
+											<td><b>{{iva.descripcion}}</b></td>
+											<td> {{iva.valor}}</td>
+											<!--<td> {{iva.valor | currency:'USD':true:'1.2-2'}}</td>-->
+										</tr>
+
+										</tbody>
+									</table>
+									
+								</div>
+							</div>
+
+					</accordion-group>
+					</accordion>
+			</div>
+	 <!--</div>-->
+
+	  
+
+
+
+</div> <!-- fin de fila-->
+
+<div class="row">
+       	<div class="col-xs-4"></div>
+		<div class="col-xs-4"></div>
+		<div class="col-xs-4">
+             	<accordion>
+					<accordion-group #group  [isDisabled]="true">
+						<div accordion-heading>
+						<div class="row">
+						<div class="col-xs-6">
+							<label class="control-label"><i  aria-hidden="true"></i><h4>TOTAL</h4></label>
+						</div>
+						<div class="col-xs-6">
+							<input type="text" id="impuestosTxt" class="form-control"  [(ngModel)]="total"  disabled  value="{{total}}" />
+						</div>
+						</div>
+
+						</div>
+						ssads
+					</accordion-group>
+					</accordion>
+
+			</div>
+	 </div>
+   
+
+
+
+					 <div class="form-group">
+                        <div class="row">
+
+							<div class="col-xs-3"><a href="Javascript:void(0);"  type="button" class="btn btn-primary boton-centrado">Guardar Todo</a></div>
+							<div class="col-xs-4"></div>
+							<div class="col-xs-3">
+
+
+
+							</div>
+
+
+                        </div>
+
+
+                    </div>
+
+
+
+
+</div> <!-- fin de fila-->
+
+
+
+
+
+				</div> <!-- fin de card-block-->
+			</div>  <!-- fin de card -->
+
+	   </div>
+	</div>  <!-- fin de fila inicial-->
+
+
+
+
+</div> <!-- fin de animate-->
+
+
+<div bsModal #childModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg"  *ngIf="editarSeleccionadoLoaded">
+    <div class="modal-content">
+      <div class="modal-header card-inverse">
+        <h4 class="modal-title pull-left">Editar Item</h4>
+        <button type="button" class="close pull-right" (click)="childModal.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+		  <div class="row  ">
+        		<form ngNoForm method="post">
+
+
+					   <div class="form-group">
+                        <div class="row ">
+
+							<div class="col-2 col-md-2">
+                                <label class="control-label"><i class="fa fa-comment" aria-hidden="true"></i> ID</label>
+                                <input type="text" class="form-control" [(ngModel)]="itemSeleccionado.id" disabled />
+                            </div>
+
+
+                            <div class="col-6 col-md-5">
+                                <label class="control-label"><i class="fa fa-comment" aria-hidden="true"></i> Concepto</label>
+                                <input type="text" class="form-control" [(ngModel)]="itemSeleccionado.concepto" />
+                            </div>                        
+                        </div>
+
+				   </div>
+
+					<div class="form-group">
+                        <div class="row ">
+							 <div class="col-md-3">
+                                <label class="control-label"><i class="fa fa-usd" aria-hidden="true"></i> Precio</label>
+                                <input type="text" class="form-control" [(ngModel)]="itemSeleccionado.precio"   />
+                            </div>
+
+                        <div class="col-md-3">
+                                <label class="control-label"><i class="fa fa-star" aria-hidden="true"></i> Unidad</label>
+                                <input type="text" class="form-control" [(ngModel)]="itemSeleccionado.unidad"  />
+                            </div>
+
+
+
+							<div class="col-md-2 selectContainer">
+								<label class="control-label"><i class="fa fa-percent" aria-hidden="true"></i>IVA</label>
+								<select class="form-control" [(ngModel)]="itemSeleccionado.iva"  name="listaIvas">
+									<option *ngFor="let iva of listaIvas" [value]="iva.valor" >{{iva.descripcion}}</option>
+								</select>
+							</div>
+
+                        </div>
+					</div>
+
+
+
+
+
+                </form>
+		  </div>
+      </div>
+
+	  <div class="modal-footer">
+        <button type="button" class="btn btn-primary" (click)="childModal.hide()" data-dismiss="modal">Cerrar</button>
+      </div>
+
+    </div>
+  </div>
+</div>

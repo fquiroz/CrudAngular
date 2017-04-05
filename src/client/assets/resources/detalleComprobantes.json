@@ -1,0 +1,72 @@
+ {   
+    "DATA":[
+        {
+        "id": 1,
+        "cantidad": 131,       
+        "concepto":"FLETE CAMION",
+        "precio": 200,
+        "unidad": 180,
+                "oIva":{
+              "id":1,
+              "descripcion":"1",
+              "valor":0
+          },
+        "iva":0
+         },
+         {
+        "id":2,
+        "cantidad":85,       
+        "concepto":"FLETE CAMION",
+        "precio":100,
+        "unidad":80,
+        "observacion":"GAS OIL REALICO",
+        "oIva":{
+              "id":2,
+              "descripcion":"IVA 5%",
+              "valor":5
+          },
+        "iva":5
+         },
+           {
+        "id":3,
+        "cantidad":46,       
+        "concepto":"FLETE CAMION",
+        "precio":300,
+        "unidad":250,
+        "observacion":"OIL LA PLATA",
+         "oIva":{
+        "id": 5,       
+        "descripcion":"IVA 21%",
+        "valor": 21        
+         },
+        "iva":21
+         },
+           {
+        "id":4,
+        "cantidad":63,       
+        "concepto":"FLETE CAMION",
+        "precio":180,
+        "unidad":150,
+         "oIva":{
+        "id": 5,       
+        "descripcion":"IVA 21%",
+        "valor": 21        
+         },
+        "iva":21
+         },  {
+        "id":5,
+        "cantidad":84,       
+        "concepto":"FLETE CAMION",
+        "precio":195.20,
+        "unidad":156.32,      
+         "oIva":{
+        "id": 5,       
+        "descripcion":"IVA 21%",
+        "valor": 21        
+         },
+        "iva":21
+         }
+    ]    
+}
+
+

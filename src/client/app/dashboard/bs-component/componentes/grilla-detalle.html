@@ -1,0 +1,40 @@
+	 			<div class="card">
+				<div class="card-header card-primary card-inverse">
+						<span class="card-title">Detalle</span>
+				</div>
+				<div class="card-block2">
+					<table class="table table-bordered textbox-margen">
+						<thead>
+						<tr>
+							<th>ID</th>
+							<th>Concepto</th>
+							<th>Unidad</th>
+							<th>Cantidad</th>
+							<th>Precio Unitario</th>
+							<th>IVA</th>
+
+							<th></th>
+							<th></th>
+						</tr>
+						</thead>
+						<tbody>
+						<tr *ngFor="let item of listaDetComprobantes">
+							<td>{{item.id}}</td>
+							<td>{{item.concepto}}</td>
+							<td>{{item.unidad}}</td>
+							<td>{{item.cantidad}}</td>
+							<td>{{item.precio}}</td>
+							<td>{{item.iva}}</td>
+							<td><a class="btn btn-primary btn-xs" (click)="editar(item)"  >Editar</a></td>
+							<td>
+								<button class="btn btn-danger btn-xs" (click)="borrar(item)" >Borrar</button>
+							</td>
+						</tr>
+
+						</tbody>
+					</table>
+
+					    <!--<pagination  [totalItems]="totalItems" [itemsPerPage]="itemsPerPage" [(ngModel)]="currentPage" class="pagination-sm"
+        previousText="&lsaquo;" nextText="&rsaquo;" firstText="&laquo;" lastText="&raquo;" (pageChanged)="pageChanged($event)"></pagination>-->
+				</div>
+		</div>

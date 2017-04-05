@@ -1,0 +1,153 @@
+
+                <form ngNoForm method="post">
+						<div class="form-group">
+								<div class="row">
+
+                                    <div class="col-md-2">
+                                    
+										    <div class="col-md-12 selectContainer">
+												<label class="control-label"><i class="fa" aria-hidden="true"></i>CUIT</label>
+												<select class="form-control" name="listaCuits">
+													<option >30-12345678-4</option>
+													<option >30-52345378-5</option>
+													<option >20-82345678-6</option>
+												</select>
+											</div>
+										
+									</div>
+
+									<div class="col-md-2">
+
+										    <div class="col-md-12 selectContainer">
+												<label class="control-label"><i class="fa" aria-hidden="true"></i>Tipo</label>
+												<select class="form-control" name="listaCuits">
+													<option >Factura</option>
+													<option >Nota de Credito</option>
+													<option >Nota de Debito</option>
+												</select>
+											</div>
+										
+									</div>
+
+				
+
+									<div class="col-md-1">
+										<label for="exampleInputPassword1"><i class="fa fa-home" aria-hidden="true"></i>Sucursal</label>
+										<input type="text" class="form-control" id="exampleInputPassword1" placeholder="">
+									</div>
+
+									 <div class="col-md-1">
+										<label for="exampleInputPassword1">Numero</label>
+										<input type="text" class="form-control" id="exampleInputPassword1" placeholder="">
+									</div>
+
+									<div class="col-md-1">
+
+										    <div class="col-md-12 selectContainer">
+												<label class="control-label"><i class="fa fa-usd" aria-hidden="true"></i>Moneda</label>
+												<select class="form-control" name="listaCuits" [(ngModel)]="moneda">
+													<option [ngValue]=1 >$</option>
+													<option [ngValue]=2 >U$</option>
+												</select>
+											</div>
+										
+									</div>
+								
+          
+									<div class="col-md-1" *ngIf="moneda ==2">
+										<label for="exampleInputPassword1">Tipo de Cambio</label>
+										<input type="text" class="form-control" id="exampleInputPassword1" placeholder="">
+									</div>
+
+		
+
+							<div class="col-md-2">
+                                <label class="control-label"><i class="fa fa-calendar-o" aria-hidden="true"></i>Fecha</label>
+                               				<table style="width: 100%">
+												<tr>
+													<td style="vertical-align: top">
+														<my-date-picker [options]="myDatePickerNormalOptions"
+																		(dateChanged)="onDateChanged($event)" (inputFieldChanged)="onInputFieldChanged($event)" (calendarViewChanged)="onCalendarViewChanged($event)" (calendarToggle)="onCalendarToggle($event)"
+																		[selDate]="selectedDateNormal" [placeholder]="placeholder" [selector]="selector"></my-date-picker>
+													</td>
+													<td style="vertical-align: top">
+														<div style="padding:4px;border-radius:4px;float:right" >
+															{{selectedTextNormal}}
+														</div>
+													</td>
+												</tr>
+											</table>
+                            </div>
+
+								<div class="col-md-2">
+										<label class="control-label"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>Fecha Vto</label>
+														<table style="width: 100%">
+														<tr>
+															<td style="vertical-align: top">
+																<my-date-picker [options]="myDatePickerNormalOptions"
+																				(dateChanged)="onDateChanged($event)" (inputFieldChanged)="onInputFieldChanged($event)" (calendarViewChanged)="onCalendarViewChanged($event)" (calendarToggle)="onCalendarToggle($event)"
+																				[selDate]="selectedDateNormal" [placeholder]="placeholder" [selector]="selector"></my-date-picker>
+															</td>
+															<td style="vertical-align: top">
+																<div style="padding:4px;border-radius:4px;float:right" >
+																	{{selectedTextNormal}}
+																</div>
+															</td>
+														</tr>
+													</table>
+									</div>
+
+
+
+
+
+
+
+							</div>
+						</div>
+
+                    <div class="form-group">
+                        <div class="row">
+                        	<div class="col-md-1 col-lg-1 ">
+
+										<label for="exampleInputPassword1">CAE</label>
+										<input type="password" class="form-control" id="exampleInputPassword1" placeholder="CAE">
+
+								</div>
+
+								<div class="col-md-1 col-lg-1 ">
+
+										<label for="exampleInputPassword1">CAI</label>
+										<input type="password" class="form-control" id="exampleInputPassword1" placeholder="CAI">
+
+								</div>
+
+								
+								   <div class="col-xs-2">
+										<label for="exampleInputPassword1">Importe Total</label>
+										<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Importe Total">
+									</div>
+
+									 <div class="col-xs-2">
+										<label for="exampleInputPassword1">Sub Total</label>
+										<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Sub Total">
+									</div>
+
+
+						<div class="col-xs-4">
+                                <label class="control-label"><i class="fa fa-paperclip" aria-hidden="true"></i> Adjuntar Factura</label>
+                                <input type="text" class="form-control"  />
+                            </div>
+
+                         <div class="col-xs-1">
+
+                            <a href="Javascript:void(0);"  type="button" class="btn btn-primary boton-centrado btn-sm"> Buscar</a>
+                         </div>
+
+                        </div>
+                    </div>
+
+
+
+
+                </form>

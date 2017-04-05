@@ -1,0 +1,64 @@
+{
+
+
+    "DATA":[
+        {
+        "id_comprobante":2284,
+        "age_id": 8090,
+        "cod_suc": "1",
+        "tipo_comprobante": "Factura",        
+        "importe_subtotal":4048.38,
+        "importe_total":4898.54,
+        "fecha_vencimiento":"01/10/2017",
+        "fecha_recibido":"25/12/2016",
+        "fecha_sap":"27/12/2016",
+        "asociado":"BL",
+        "clasificacion_gasto":"N",
+        "condicion_pago":"CONTADO",
+        "gerencia_actual":"1",
+        "gerencia_recibe":"2",
+        "numero_doc":"488",
+        "ultimo_usuario":"JFERNAN",
+        "ultima_fecha":"25/12/2016"
+         },
+        {
+        "id_comprobante":2284,
+        "age_id": 8090,
+        "cod_suc": "1",
+        "tipo_comprobante": "DEBITO",        
+        "importe_subtotal":5200.38,
+        "importe_total":5698.54,
+        "fecha_vencimiento":"01/10/2017",
+        "fecha_recibido":"25/12/2016",
+        "fecha_sap":"27/12/2016",
+        "asociado":"BL",
+        "clasificacion_gasto":"N",
+        "condicion_pago":"CONTADO",
+        "gerencia_actual":"1",
+        "gerencia_recibe":"2",
+        "numero_doc":"488",
+        "ultimo_usuario":"GGONZA",
+        "ultima_fecha":"25/12/2016"
+         },
+         {
+        "id_comprobante":2249,
+        "age_id": 7366,
+        "cod_suc": "1",
+        "tipo_comprobante": "CREDITO",        
+        "importe_subtotal":3800.78,
+        "importe_total":4000.12,
+        "fecha_vencimiento":"01/10/2017",
+        "fecha_recibido":"25/12/2016",
+        "fecha_sap":"27/12/2016",
+        "asociado":"BL",
+        "clasificacion_gasto":"N",
+        "condicion_pago":"15 DIAS FECHA ENTREGA",
+        "gerencia_actual":"1",
+        "gerencia_recibe":"2",
+        "numero_doc":"490",
+        "ultimo_usuario":"SBASILE",
+        "ultima_fecha":"25/12/2016"
+         }
+    ]    
+}
+
