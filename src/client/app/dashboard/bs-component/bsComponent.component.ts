@@ -1,6 +1,5 @@
 import { Component, OnInit ,ViewChild,AfterContentInit,AfterViewInit,OnChanges,SimpleChanges} from '@angular/core';
 import * as moment from 'moment';
-
 import { IDetalleComprobante,DetalleComprobante,IIva,Iva,ILista,Pagination,PaginatedResult} from '../../shared/interfaces';
 import { DataService } from '../../shared/services/data.service';
 
@@ -11,7 +10,7 @@ import { ModalDirective } from 'ng2-bootstrap';
 @Component({
 	moduleId: module.id,
     selector: 'bs-component',
-    templateUrl: './bs-component.component.html',
+    templateUrl: './bs-Component.component.html',
     styleUrls: ['./estilos/estilo-principal.css'],    
     providers: [ DataService ]
 })

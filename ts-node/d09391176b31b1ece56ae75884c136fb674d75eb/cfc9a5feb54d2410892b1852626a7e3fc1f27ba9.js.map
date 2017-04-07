@@ -1,0 +1,1 @@
+{"version":3,"file":"/home/ferlux/Documentos/desarrollo/worskpaces/AngularJs/CrudAngular/tools/utils/project/sample_util.ts","sources":["/home/ferlux/Documentos/desarrollo/worskpaces/AngularJs/CrudAngular/tools/utils/project/sample_util.ts"],"names":[],"mappings":";AAAA;AAEA,CAAC;AAFe,cAAM,SAErB,CAAA","sourcesContent":["export function myUtil() {\n  // Code goes here\n}\n"]}

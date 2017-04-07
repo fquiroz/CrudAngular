@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { routes } from './app.routes';
-import { DropdownModule } from 'ng2-bootstrap';
+import { BsDropdownModule } from 'ng2-bootstrap';
 import { ModalModule } from 'ng2-bootstrap';
 import { PaginationModule } from 'ng2-bootstrap';
 import { LoginModule } from './login/login.module';
@@ -18,7 +18,7 @@ import { AccordionModule } from 'ng2-bootstrap';
 	imports: [
 		BrowserModule,
 		HttpModule,
-		DropdownModule.forRoot(),
+		BsDropdownModule.forRoot(),
 		ModalModule.forRoot(),
 		RouterModule.forRoot(routes),
 		PaginationModule.forRoot(),

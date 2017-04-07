@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { DropdownModule } from 'ng2-bootstrap';
+import { BsDropdownModule  } from 'ng2-bootstrap';
 import { ModalModule } from 'ng2-bootstrap';
 import { MyDatePickerModule } from 'mydatepicker';
 import { PaginationModule } from 'ng2-bootstrap';
@@ -17,7 +17,7 @@ import { DatosCabeceraComponent } from './componentes/datos-cabecera.component';
 @NgModule({
     imports: [CommonModule,FormsModule,
     MyDatePickerModule,
-    DropdownModule,
+    BsDropdownModule.forRoot(),
     ModalModule.forRoot(),
     PaginationModule.forRoot(),
     AccordionModule.forRoot()],
